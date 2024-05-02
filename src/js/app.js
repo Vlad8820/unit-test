@@ -1,7 +1,7 @@
 // TODO: write your code here
-function getHealthStatus(character) {
+export function getHealthStatus(character) {
     const health = character.health;
-    if(health > 50) {
+    if (health > 50) {
         return 'healthy';
     } else if (health >= 15) {
         return 'wounded';
@@ -9,8 +9,11 @@ function getHealthStatus(character) {
         return 'critical';
     }
 }
+export function sortHeroesByHealth(heroes) {
+    return heroes.slice().sort((a, b) => b.health - a.health);
+}
 
-module.exports = getHealthStatus;
+
 
 import sum from './basic';
 
